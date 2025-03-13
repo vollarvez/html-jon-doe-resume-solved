@@ -192,7 +192,7 @@ test("The table has a table header cell for LinkedIn", async ({ page }) => {
 
 test("the table has 3 anchor elements", async ({ page }) => {
   const links = page.locator("table").locator("a");
-  await expect(links).toHaveCount(3);
+  await expect(links).toHaveCount(4);
 });
 
 test("the table has 2 anchor elements that open the link in a new tab", async ({
@@ -201,7 +201,7 @@ test("the table has 2 anchor elements that open the link in a new tab", async ({
   const linksWithBlankTargets = page
     .locator("table")
     .locator('[target="_blank"]');
-  await expect(linksWithBlankTargets).toHaveCount(2);
+  await expect(linksWithBlankTargets).toHaveCount(4);
 });
 
 test("has a an anchor element that has a valid email link text", async ({
